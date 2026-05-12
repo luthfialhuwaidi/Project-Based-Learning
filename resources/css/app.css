@@ -1,0 +1,55 @@
+/* Sistem MBG - Custom CSS */
+/* TailwindCSS dimuat via CDN di layouts/app.blade.php */
+/* File ini untuk custom style tambahan */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Scrollbar custom */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Animasi fade in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Pulse dot realtime */
+@keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+.pulse-dot {
+    animation: pulseDot 1.5s ease-in-out infinite;
+}
+
+/* Map container */
+.leaflet-container {
+    font-family: 'Inter', sans-serif !important;
+    border-radius: 16px;
+}
+.leaflet-popup-content-wrapper {
+    border-radius: 12px !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+.leaflet-popup-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+}
